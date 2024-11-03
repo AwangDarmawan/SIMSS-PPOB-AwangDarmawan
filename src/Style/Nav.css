@@ -1,0 +1,64 @@
+.navbar-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    
+  }
+  .navbar-brand {
+
+    width: 100px;
+    height: 50px;
+    display:flex;
+    align-items: center;
+    gap:10px
+
+  }
+  .txt-Sims{
+    color: black;
+    font-weight: semi-bold;
+  }
+  .txt-Sims:hover{
+    color: #f75539!important;
+  }
+  
+  .logo1{
+    height:30px
+  }
+
+
+  
+  .button-menu {
+    display: flex;
+    gap: 24px;
+  }
+  .label{
+    color: black;
+    font-weight: semi-bold;
+  }
+  .label:hover{
+    
+    color: #f75539!important;
+  }
+  
+ 
+  
+  @media screen and (max-width: 768px) {
+    .navbar-wrapper {
+     
+      display: inline-block;
+    }
+  
+    .navbar-brand {
+      display: none;
+    }
+  
+  
+    
+  
+    .button-menu {
+      visibility: hidden;
+    }
+  }
+  
