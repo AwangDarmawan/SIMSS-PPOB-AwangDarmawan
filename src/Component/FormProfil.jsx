@@ -3,7 +3,7 @@ import { ImageAlt } from "react-bootstrap-icons";
 import "../Style/FormProfil.css";
 import { getProfile, updateProfile, uploadProfileImage } from "../Service/Api";
 import { useEffect, useState } from "react";
-import profilsaya from "../assets/Profile Photo.png"
+
 
 
 const FormProfil = () => {
@@ -100,7 +100,7 @@ const FormProfil = () => {
     <>
       <div className="header-border mt-5">
         <div className="berder" >
-           <img src={dataProfile.profile_image || profilsaya} alt="Profile" className="img-berder " />
+           <img src={dataProfile.profile_image} alt="Profile" className="img-berder " />
         </div>
         
         

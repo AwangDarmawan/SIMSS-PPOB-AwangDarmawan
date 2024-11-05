@@ -223,7 +223,7 @@ export const uploadProfileImage = async (formData) => {
         "Content-Type": "multipart/form-data",
       },
     });
-    console.log("upload poto", response);
+   
     return response.data;
   } catch (error) {
     console.error("Error uploading image:", error);

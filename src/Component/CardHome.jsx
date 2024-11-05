@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from 'react';
-import profil from "../assets/Profile Photo.png";
+
 import { useState } from "react";
 import "../Style/CardHome.css";
 import { EyeFill, EyeSlashFill } from "react-bootstrap-icons";
@@ -42,7 +42,7 @@ const CardHome = () => {
       <div className='row '>
         <div className='col-lg-6 col-md-6  col-sm-12  mt-5'>
         
-          <img src={ dataProfile.profile_image || profil   } alt="Profile"  className='profil'/>
+          <img src={ dataProfile.profile_image} alt="Profile"  className='profil'/>
           <h4 className=' txt-selamat mt-3'>Selamat Datang,</h4>
           <h1 className='txt-nama fw-bold'>{`${dataProfile.first_name} ${dataProfile.last_name}`}</h1>
         </div>
