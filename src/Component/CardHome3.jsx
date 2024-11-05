@@ -1,28 +1,29 @@
-import React from 'react'
-import "../Style/CardHome3.css"
+import React, { useEffect, useState } from 'react'
+import { getBanner } from '../Service/Api'
+
+
 
 function CardHome3() {
+  const [BannerData, setBannerData] = useState([]);
+  const fetchBanner = async()=>{
+    const objek = await getBanner();
+    setBannerData(objek.data)
+  }
+  useEffect(() => {
+    fetchBanner();
+  }, []);
+
   return (
     <>
-       <section className='container'>
-        <div className='row  '>
-            <div className='col-lg-3 col-md-4 col-sm-6 bg-primary categori mx-3 my-3 rounded 'style={{ height: '100px' }}>
-                <h1>ww</h1>
+       <section className='container my-4'>
+        <span className='fw-bold'>Temukan Promo Menarik</span>
+        <div className='row'>
+        {BannerData.map ((item)=> (
+            <div className='col-lg-3 col-md-4 col-sm-6 categori  rounded py-3 ' key={item.banner_name}>
+             
+                <img src={item.banner_image} alt=""  />
             </div>
-            <div className='col-lg-3 col-md-4 col-sm-6 bg-primary categori mx-3 my-3 rounded' style={{ height: '100px' }}>
-            <h1>ww</h1>
-            </div>
-            <div className='col-lg-3 col-md-4 col-sm-6 bg-primary categori mx-3 my-3 rounded' style={{ height: '100px' }}>
-            <h1>ww</h1>
-            </div>
-            <div className='col-lg-3 col-md-4 col-sm-6 bg-primary categori mx-3 my-3 rounded ' style={{ height: '100px' }}>
-            <h1>ww</h1>
-            </div>
-            <div className='col-lg-3 col-md-4 col-sm-6 bg-primary categori mx-3 my-3 rounded' style={{ height: '100px' }}>
-            <h1>ww</h1>
-            </div>
-            
-
+            ))};
         </div>
       </section>
     </>

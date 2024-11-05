@@ -80,7 +80,8 @@
     border:none;
   }
   .Ilus{
-    width:97%
+    width:97%;
+    height : 100%
   }
   
   @media (max-width: 768px) {

@@ -21,7 +21,14 @@
     width: 90px;
     height: 91px;
     border-radius: 50%;
-    border: solid 3px #6148ff !important;
+    border: solid 3px #f75539 !important;
+    
+  }
+  .img-berder{
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: solid 3px #f75539 !important;
     
   }
   
@@ -94,6 +101,7 @@
   .btn-profile:hover {
     background: #489cff;
   }
+  
   
   @media screen and (max-width: 768px) {
     .btn-img {

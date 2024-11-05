@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import logo from '../assets/Logo.png';
 import Ilus from '../assets/Illustrasi Login.png'
 import key from '../assets/key.png';
-import { registerUser } from "../Service/ApiAuth";
+import { registerUser } from "../Service/Api";
 import { toast } from 'react-toastify';
 
 
@@ -102,7 +102,7 @@ const Registrasi = () => {
                     <i className="icon-show" onClick={() => setShowPassword(!showPassword)}>{showPassword ? <EyeSlashFill/> : <EyeFill/>}</i>
                   </div>
                   
-                <div className="d-grid mb-5 mt-4">
+                <div className="d-grid mt-4">
                   <button className="btn btn-masuk " type="submit">
                     Registrasi
                   </button>

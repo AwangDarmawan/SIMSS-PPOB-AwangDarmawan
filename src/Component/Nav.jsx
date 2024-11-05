@@ -17,14 +17,15 @@ const Nav = () => {
           </div>
         </Link>
         <div className="button-menu d-flex align-items-center">
-          <Link to={"/notifikasi"} className="text-decoration-none">
+          <Link to={"/topup"} className="text-decoration-none">
             <label className="label">Top Up</label>
           </Link>
-          <Link to={"/akun"} className="text-decoration-none">
+          <Link to={"/histori"} className="text-decoration-none">
           <label className="label">Transaction</label>
           </Link>
           <Link to={"/akun"} className="text-decoration-none">
-          <label className="label">Akun</label>
+          <label className="label" >Akun</label>
+          
           </Link>
         </div>
       </nav>

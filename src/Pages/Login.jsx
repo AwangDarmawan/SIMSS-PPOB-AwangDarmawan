@@ -1,32 +1,35 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { EyeFill, EyeSlashFill } from "react-bootstrap-icons";
 import "../Style/Login.css";
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../assets/Logo.png';
 import Ilus from '../assets/Illustrasi Login.png'
 import key from '../assets/key.png'
-import { loginUser } from "../Service/ApiAuth";
+import { getBalance, loginUser } from "../Service/Api";
+import { ContexBalance } from '../ContextApi/Balance';
 
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const { setDataBalance } = useContext(ContexBalance);
+ 
   const navigate = useNavigate();
-
 
   const loginHandler = async (e) => {
     e.preventDefault();
     try {
-      const login = await loginUser(email, password);
-      if(login.token) {
-        localStorage.setItem("token", login.token);
-        navigate("/home");
-      }
+      const response = await loginUser(email, password);
+      localStorage.setItem("token", response.token); 
+      const updatedBalance = await getBalance();
+      setDataBalance(updatedBalance.data)
+      navigate("/home"); 
     } catch (error) {
-      throw(error);
+      
     }
-  }
+  };
+
   return (
     <>
       <div className="auth-section">
@@ -63,7 +66,7 @@ const Login = () => {
                     <i className="icon-show" onClick={() => setShowPassword(!showPassword)}>{showPassword ? <EyeSlashFill/> : <EyeFill/>}</i>
                   </div>
                   
-                <div className="d-grid mb-5 mt-4">
+                <div className="d-grid mb-1 mt-4">
                   <button className="btn btn-masuk " type="submit">
                     Masuk
                   </button>
