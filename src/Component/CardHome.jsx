@@ -44,7 +44,7 @@ const CardHome = () => {
         
           <img src={ dataProfile.profile_image || profil   } alt="Profile"  className='profil'/>
           <h4 className=' txt-selamat mt-3'>Selamat Datang,</h4>
-          <h1 className='txt-nama fw-bold'>{`${dataProfile.first_name} ${dataProfile.first_name}`}</h1>
+          <h1 className='txt-nama fw-bold'>{`${dataProfile.first_name} ${dataProfile.last_name}`}</h1>
         </div>
     
         <div className='col-lg-6 col-md-6  col-sm-12 '>
