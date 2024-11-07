@@ -1,16 +1,21 @@
 import { useLocation, useParams } from "react-router-dom";
-import { PostTransaksi } from "../Service/Api";
-import { useState } from "react";
+import { getBalance, PostTransaksi } from "../Service/Api";
+import { useContext, useState } from "react";
 import { toast } from "react-toastify";
+import { ContexBalance } from "../ContextApi/Balance";
 
 function CardPembayaran() {
+
   const { service_code } = useParams();
   const location = useLocation();
   const { icon, name, tariff } = location.state || {};
   const [datatransaksi, setDataTransaksi] = useState('');
+  const { setDataBalance } = useContext(ContexBalance);
+  const [loading, setLoading] = useState(false);
 
   const handleaddTransaksi = async () => {
-   
+    if (loading) return; 
+    setLoading(true);
     const amountNumber = parseFloat(datatransaksi);
     const tariffNumber = parseFloat(tariff);
     
@@ -20,13 +25,17 @@ function CardPembayaran() {
     }
 
     try {
-      const objek = await PostTransaksi(service_code, datatransaksi); 
+      await PostTransaksi(service_code, datatransaksi); 
       setDataTransaksi(''); 
-      console.log("Data Transaksi:", objek);
+      
+      const updatedBalance = await getBalance();
+      setDataBalance(updatedBalance.data);
+     
     } catch (error) {
       console.error("Error saat melakukan transaksi:", error);
       
     }
+    setLoading(false);
   };
 
   const handleChange = (e) => {
@@ -56,7 +65,7 @@ function CardPembayaran() {
             className='my-4 border-0 fw-bold text-white'
             style={{ background: "#f75539", height: "50px", width: "100%" }}
           >
-            Top Up
+            Bayar
           </button>
         </div>
       </div>

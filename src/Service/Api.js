@@ -33,13 +33,13 @@ export const loginUser = async (email, password) => {
     const response = await axios.post(`${baseUrl}/login`, { email, password });
     const token = response.data.data.token;
     localStorage.setItem('Token', token);
-    
+   
     toast.success(response.data.message);
     
     return response.data.data;
   } catch (error) {
       toast.error(error.response.data.message);
-    
+      console.error(error); 
   }
 };
 
@@ -50,14 +50,11 @@ export const loginUser = async (email, password) => {
   export const getProfile = async () => {
     try {
       const token = localStorage.getItem('Token'); 
-      
       const response = await axios.get(`${baseUrl}/profile`, {
         headers: {
           Authorization: `Bearer ${token}` 
         }
       });
-      
-      
       return response.data;
     } catch (error) {
         toast.error(error.response.data.message);
@@ -166,7 +163,7 @@ export const PostTransaksi = async (service_code, nominal) => {
     
     return response.data;
   } catch (error) {
-    // Menangani error dan memberikan feedback kepada pengguna
+   
     if (error.response) {
       toast.error(error.response.data.message);
     } else {
@@ -176,14 +173,18 @@ export const PostTransaksi = async (service_code, nominal) => {
   }
 };
 
-export const getRiwayat = async () => {
+export const getRiwayat = async (offset, limit) => {
   try {
     const token = localStorage.getItem('Token'); 
     
     const response = await axios.get(`${baseUrl}/transaction/history`, {
       headers: {
         Authorization: `Bearer ${token}` 
-      }
+      },
+      params: {
+        offset,
+        limit,
+      },
     });
    
     return response.data;
@@ -227,7 +228,7 @@ export const uploadProfileImage = async (formData) => {
     return response.data;
   } catch (error) {
     console.error("Error uploading image:", error);
-    throw error; // Pastikan untuk melempar error agar bisa ditangani di tempat lain
+    throw error; 
   }
 };
 

@@ -17,6 +17,7 @@ const Registrasi = () => {
   const [password, setPassword] = useState("");
   const [confpassword, setConfPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
+  const [showconf, setShowconf] = useState(false);
   
   const fethRegist = async (e) => {
     e.preventDefault();
@@ -92,14 +93,14 @@ const Registrasi = () => {
                   <img  src={key} alt="key" className ="key" />
                     <input
                 
-                      type={showPassword ? "text" : "password"}
+                      type={showconf ? "text" : "password"}
                       className="form-control-login py-2"
                       placeholder="Konfirmasi password "
                       value={confpassword}
                      onChange={(e) => setConfPassword(e.target.value)}
                       required
                     />
-                    <i className="icon-show" onClick={() => setShowPassword(!showPassword)}>{showPassword ? <EyeSlashFill/> : <EyeFill/>}</i>
+                    <i className="icon-show" onClick={() => setShowconf(!showconf)}>{showconf ? <EyeSlashFill/> : <EyeFill/>}</i>
                   </div>
                   
                 <div className="d-grid mt-4">

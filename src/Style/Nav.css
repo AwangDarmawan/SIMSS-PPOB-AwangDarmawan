@@ -49,14 +49,9 @@
      
       display: inline-block;
     }
-  
     .navbar-brand {
       display: none;
     }
-  
-  
-    
-  
     .button-menu {
       visibility: hidden;
     }

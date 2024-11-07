@@ -26,7 +26,7 @@ const Login = () => {
       setDataBalance(updatedBalance.data)
       navigate("/home"); 
     } catch (error) {
-      
+      console.error("Login error:", error);
     }
   };
 

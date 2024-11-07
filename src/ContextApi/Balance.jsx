@@ -12,9 +12,7 @@ const ProviderBalance = ({ children }) => {
 
   const fetchBalance = async () => {
     const nilai = await getBalance();
-  
     setDataBalance(nilai.data);
-  
 };
 
 
@@ -23,7 +21,7 @@ const ProviderBalance = ({ children }) => {
   }, []);
 
   return (
-    <ContexBalance.Provider value={{ dataBalance, setDataBalance }}>
+    <ContexBalance.Provider value={{ dataBalance ,setDataBalance}}>
       {children}
     </ContexBalance.Provider>
   );

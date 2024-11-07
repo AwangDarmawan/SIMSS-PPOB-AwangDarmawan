@@ -93,7 +93,7 @@ const FormProfil = () => {
 
   const handleLogout = () => {
     window.location.href = "/"; 
-    localStorage.removeItem("token");
+    localStorage.removeItem("Token");
     
   };
   return (
