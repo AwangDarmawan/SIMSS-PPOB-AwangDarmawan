@@ -13,7 +13,7 @@ function Pembayaran() {
     <>
       <Nav/>
       <CardHome />
-       <CardPembayaran/>
+      <CardPembayaran/>
     
     </>
   )
