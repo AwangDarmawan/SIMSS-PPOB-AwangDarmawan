@@ -108,9 +108,9 @@ const Registrasi = () => {
                     Registrasi
                   </button>
                 </div>
-                
+                <span className="txt-belum d-flex justify-content-center">Sudah punya akun? Login <Link to="/" className="link">disini</Link></span>
               </form>
-              <span className="txt-belum d-flex justify-content-center">Sudah punya akun? Login <Link to="/" className="link">disini</Link></span>
+              
             </div>
           </div>
           <div className="col-md-5 account-block">
