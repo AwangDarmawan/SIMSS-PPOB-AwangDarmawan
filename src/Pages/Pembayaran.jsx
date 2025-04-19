@@ -3,7 +3,7 @@
 import CardPembayaran from '../Component/CardPembayaran'
 import Nav from '../Component/Nav'
 import CardHome from '../Component/CardHome'
-
+import Footer from '../Component/Footer'
 
 
 function Pembayaran() {
@@ -14,6 +14,7 @@ function Pembayaran() {
       <Nav/>
       <CardHome />
       <CardPembayaran/>
+      <Footer/>
     
     </>
   )

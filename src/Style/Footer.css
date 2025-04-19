@@ -1,0 +1,43 @@
+.text-body{
+  margin-bottom : 50px
+} 
+.footer-wrapper {
+  background-color: #f75539;
+  color: white;
+  border-top: 1px solid #eaeaea;
+}
+
+.Sims-text {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+.Ig-text{
+    font-size: 0.9rem;
+  font-weight: bold;
+}
+.Wa-text{
+  font-size: 0.9rem;
+font-weight: bold;
+}
+.footer-Wa {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  color: #25D366;
+}
+.footer-Ig {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+  color: #e1306c;
+}
+
+.footer-icon:hover {
+  color: #ffe7e2;
+}

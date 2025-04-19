@@ -1,7 +1,8 @@
-import React from 'react'
+
 import Nav from '../Component/Nav'
 import CardHome from '../Component/CardHome'
 import CardhistoryTarnsaksi from '../Component/CardhistoryTarnsaksi'
+import Footer from '../Component/Footer'
 
 const HistoriTransaksi = () => {
   return (
@@ -9,6 +10,7 @@ const HistoriTransaksi = () => {
       <Nav/>
       <CardHome/>
       <CardhistoryTarnsaksi/>
+      <Footer/>
     </div>
   )
 }

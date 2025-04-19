@@ -19,8 +19,6 @@ export const registerUser = async (email,first, last,password) => {
     return response.data;
     } catch (error) {
         toast.error(error.response.data.message);
-        
-
     }
   };
 

@@ -2,7 +2,7 @@
 import Nav from '../Component/Nav'
 import CardTopUp from '../Component/CardTopUp'
 import CardHome from '../Component/CardHome'
-
+import Footer from '../Component/Footer'
 
 
 
@@ -13,6 +13,7 @@ const Topup = () => {
       <Nav/>
       <CardHome  />
       <CardTopUp />
+      <Footer/>
     </>
   )
 }

@@ -9,6 +9,7 @@ import { getBalance, loginUser } from "../Service/Api";
 import { ContexBalance } from '../ContextApi/Balance';
 
 
+
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
@@ -32,6 +33,7 @@ const Login = () => {
 
   return (
     <>
+    
       <div className="auth-section">
         <div className="row auth-wrapper">
           <div className=" col-md-7 d-flex justify-content-center align-items-center">
@@ -77,8 +79,8 @@ const Login = () => {
           </div>
           <div className="col-md-5 account-block">
             <img src={Ilus} alt="" className="Ilus" />
-            
           </div>
+          
         </div>
       </div>
     </>
