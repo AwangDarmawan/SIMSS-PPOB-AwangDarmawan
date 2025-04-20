@@ -22,7 +22,7 @@ const Footer = () => {
             <span className="ms-2">+6283125307355</span>
           </a>
           <a
-            href="https://instagram.com/simsppbo"
+            href="https://www.instagram.com/awng_drmwn"
             
             className="Ig-text  footer-Ig footer-icon d-flex justify-content-center"
           >

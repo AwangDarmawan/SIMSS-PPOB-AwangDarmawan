@@ -1,7 +1,7 @@
 import "../Style/Nav.css"
 import { Link } from "react-router-dom";
 import logo from '../assets/Logo.png';
-import { faWallet, faExchangeAlt, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faWallet, faExchangeAlt, faUser,faHome } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Nav = () => {
@@ -28,7 +28,10 @@ const Nav = () => {
           <Link to={"/akun"} className=" text-decoration-none d-flex flex-column align-items-center">
           <FontAwesomeIcon icon={faUser}  className="text-white"/> 
           <label className="label" >Akun</label>
-          
+          </Link>
+          <Link to={"/home"} className=" text-decoration-none d-flex flex-column align-items-center">
+          <FontAwesomeIcon icon={faHome}  className="text-white"/> 
+          <label className="label" >Beranda</label>
           </Link>
         </div>
       </nav>
